@@ -7,6 +7,8 @@ import Profile from "../pages/Profile/Profile";
 import Home from "../pages/Home/Home";
 import CreateTask from "../pages/CreateTask/CreateTask";
 import ViewTask from "../pages/ViewTask/ViewTask";
+import JoinTeam from "../pages/JoinTeam/Jointeam";
+import TeamTask from "../pages/JoinTeam/TeamTask";
 
 const router = createBrowserRouter([
   {
@@ -22,8 +24,8 @@ const router = createBrowserRouter([
     element: <PrivateRoutes><Main /></PrivateRoutes>,
     children: [
       {
-        path:'',
-        element:<PrivateRoutes><Home/></PrivateRoutes>
+        path: '',
+        element: <PrivateRoutes><Home /></PrivateRoutes>
       },
       {
         path: 'profile',
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
       {
         path: 'view-task',
         element: <PrivateRoutes><ViewTask /></PrivateRoutes>
+      },
+      {
+        path: 'join-team',
+        element: <PrivateRoutes><JoinTeam /></PrivateRoutes>
+      },
+      {
+        path: 'team-task',
+        element: <PrivateRoutes><TeamTask /></PrivateRoutes>
       }
     ]
   },

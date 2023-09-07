@@ -10,7 +10,6 @@ const ViewTask = () => {
     useEffect(() => {
 
         const allViewTask = JSON.parse(localStorage.getItem('task-info'))
-        console.log(chooseDate)
         if (choosePriority === '5') {
 
             const priorityFilter = allViewTask.filter((value) => {
@@ -55,7 +54,6 @@ const ViewTask = () => {
             setAlltask(priorityFilter)
         }
         else {
-
             setAlltask(allViewTask)
         }
     }, [choosePriority, chooseStatus, chooseDate])
@@ -92,7 +90,7 @@ const ViewTask = () => {
                         </div>
                     </div>
                     <div>
-                        <input type="date" placeholder="Type here" value={chooseDate} onChange={(e) => setChooseDate(e.target.value)} className="input input-bordered input-warning w-full max-w-xs" />
+                        <input type="date" placeholder="Type here" value={chooseDate} onChange={(e) => setChooseDate(e.target.value)} className="input input-bordered input-info w-full max-w-xs" />
                     </div>
                 </div>
 
@@ -149,6 +147,18 @@ const ViewTask = () => {
                     </div>
 
                 </div>
+
+
+                <hr className="pb-10" />
+                <div className="px-4 flex justify-center items-center pb-24 pt-12 lg:pt-0">
+                    <div className="mockup-code w-full lg:w-7/12">
+                        <pre data-prefix="1" className="text-warning"><code>Requirements 4 Completed, Task Filtering and Sorting</code></pre>
+                        <pre data-prefix="2"><code>Filter tasks by their status (completed, in progress, pending) and due date.
+                        </code></pre>
+                        <pre data-prefix="3"><code>Allow users to sort tasks by different criteria (priority, due date, etc.)</code></pre>
+                    </div>
+                </div>
+
             </div>
         </div>
     );
