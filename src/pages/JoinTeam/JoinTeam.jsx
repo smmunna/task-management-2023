@@ -37,10 +37,20 @@ const JoinTeam = () => {
                     <div>
                         <form onSubmit={handleFormSubmit}>
                             <div className="form-control pb-4">
-                                <input type="text" placeholder="Enter your team name" name="teamname" className="input input-bordered w-96" required />
+                                <input type="text" placeholder="Enter your team name" name="teamname" className="input input-bordered w-full lg:w-96" required />
                             </div>
                             <button className="btn btn-accent">Join Now</button>
                         </form>
+                    </div>
+
+
+                </div>
+
+                <div className="px-4 mt-5 flex justify-center items-center pb-24 pt-12 lg:pt-0">
+                    <div className="mockup-code w-full lg:w-7/12">
+                        <pre data-prefix="1" className="text-warning"><code>Task 3 Completed: Create a team-based environment where users can form teams and invite others to join</code></pre>
+                        <pre data-prefix="2"><code>Users should only be able to view and manage tasks within their team.
+                        </code></pre>
                     </div>
                 </div>
             </div>
