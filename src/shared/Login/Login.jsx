@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Login = () => {
     const [error, setError] = useState('')
+    const { setUser } = useContext(AuthContext)
     const navigate = useNavigate();
     const handleLoginSubmit = (e) => {
 
@@ -25,9 +27,10 @@ const Login = () => {
         }
         setError('')
         toast('Login Successfull')
+        setUser(userInfo)
 
         setTimeout(() => {
-            navigate('/')
+            navigate('/home')
         }, 2000)
     }
 
@@ -41,7 +44,7 @@ const Login = () => {
                             <h3 className="text-center p-5 text-3xl font-semibold">Please Login</h3>
                             <hr />
                             {
-                                error && <><h3 className="p-4 text-red-600 font-bold">{error}</h3></>
+                                error && <><h3 className=" py-4 text-red-600 font-bold text-center">{error}</h3> <hr /></>
                             }
                             <form onSubmit={handleLoginSubmit}>
                                 <div className="card-body">
