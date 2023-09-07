@@ -63,7 +63,7 @@ const Login = () => {
                                         <label className="label">
                                             <span className="label-text">Password</span>
                                         </label>
-                                        <input type="text" placeholder="password" name="pass" className="input input-bordered"  required/>
+                                        <input type="text" placeholder="password" name="pass" className="input input-bordered" required />
                                     </div>
                                     <div className="form-control mt-6">
                                         <button className="btn btn-primary">Login</button>

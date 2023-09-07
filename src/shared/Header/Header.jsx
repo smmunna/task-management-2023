@@ -1,36 +1,36 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 
 const Header = () => {
-    const{user}=useContext(AuthContext)
+    const { user } = useContext(AuthContext)
     const navigate = useNavigate()
     const navlink = <>
-        <li><a>Home</a></li>
+        <li><Link to="/home">Home</Link></li>
         <li><a>Create Task</a></li>
         <li><a>Join Team</a></li>
     </>
 
-const handleLogout = () =>{
-    localStorage.removeItem('user')
-    toast('Logout Successfull')
-    setTimeout(() => {
-        navigate('/')
-    }, 1000)
- 
-}
+    const handleLogout = () => {
+        localStorage.removeItem('user')
+        toast('Logout Successfull')
+        setTimeout(() => {
+            navigate('/')
+        }, 1000)
+
+    }
 
     return (
         <div className="">
 
-            <div className="navbar px-4 md:px-24 bg-slate-900">
+            <div className="navbar px-1 md:px-24 bg-slate-900">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-slate-900 rounded-box w-52">
                             {navlink}
                         </ul>
                     </div>
@@ -50,10 +50,9 @@ const handleLogout = () =>{
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-slate-900 rounded-box w-52">
                             <li>
-                                <a className="justify-between">
+                                <Link to='/home/profile' className="justify-between">
                                     Profile
-                                    <span className="badge">New</span>
-                                </a>
+                                </Link>
                             </li>
                             <li><a>Dashboard</a></li>
                             <li><a onClick={handleLogout}>Logout</a></li>
@@ -61,7 +60,7 @@ const handleLogout = () =>{
                     </div>
                 </div>
             </div>
-        <ToastContainer/>
+            <ToastContainer />
         </div>
     );
 }
