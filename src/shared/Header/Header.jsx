@@ -8,7 +8,7 @@ const Header = () => {
     const navigate = useNavigate()
     const navlink = <>
         <li><Link to="/home">Home</Link></li>
-        <li><a>Create Task</a></li>
+        <li><Link to="/home/create-task">Create Task</Link></li>
         <li><a>Join Team</a></li>
     </>
 

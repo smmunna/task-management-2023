@@ -5,6 +5,7 @@ import Register from "../shared/Register/Register";
 import PrivateRoutes from "../privateRoutes/PrivateRoutes"
 import Profile from "../pages/Profile/Profile";
 import Home from "../pages/Home/Home";
+import CreateTask from "../pages/CreateTask/CreateTask";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: 'profile',
         element: <PrivateRoutes><Profile /></PrivateRoutes>
+      },
+      {
+        path: 'create-task',
+        element: <PrivateRoutes><CreateTask /></PrivateRoutes>
       }
     ]
   },
