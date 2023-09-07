@@ -7,7 +7,7 @@ import PrivateRoutes from "../privateRoutes/PrivateRoutes"
 const router = createBrowserRouter([
     {
       path: "/",
-      element: <Login/>,
+      element: JSON.parse(localStorage.getItem('user')) ? <Main/>:<Login/>,
     },
     {
       path: "/register",
@@ -20,10 +20,7 @@ const router = createBrowserRouter([
 
       ]
     },
-    {
-      path:'/login',
-      element:<Login/>
-    }
+   
   ]);
 
   export default router;

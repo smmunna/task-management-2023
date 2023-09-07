@@ -15,8 +15,13 @@ const Login = () => {
         const pass = form.pass.value;
 
         const userInfo = JSON.parse(localStorage.getItem('user'))
-        const localEmail = userInfo.email;
-        const localPass = userInfo.pass;
+        const localEmail = userInfo?.email;
+        const localPass = userInfo?.pass;
+
+        if (localEmail == null) {
+            setError('No Accounts Found !!')
+            return
+        }
         if (email !== localEmail) {
             setError('Invalid email/password')
             return
@@ -31,7 +36,7 @@ const Login = () => {
 
         setTimeout(() => {
             navigate('/home')
-        }, 2000)
+        }, 1000)
     }
 
     return (
@@ -52,13 +57,13 @@ const Login = () => {
                                         <label className="label">
                                             <span className="label-text">Email</span>
                                         </label>
-                                        <input type="text" placeholder="email" name="email" className="input input-bordered w-96" />
+                                        <input type="text" placeholder="email" name="email" className="input input-bordered w-96" required />
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Password</span>
                                         </label>
-                                        <input type="text" placeholder="password" name="pass" className="input input-bordered" />
+                                        <input type="text" placeholder="password" name="pass" className="input input-bordered"  required/>
                                     </div>
                                     <div className="form-control mt-6">
                                         <button className="btn btn-primary">Login</button>

@@ -10,6 +10,7 @@ const Register = () => {
         const username = form.username.value;
         const email = form.email.value;
         const pass = form.pass.value;
+        const bio = form.bio.value;
         const photo = form.photo.files[0];
 
         if (photo) {
@@ -20,6 +21,7 @@ const Register = () => {
                     username,
                     email,
                     pass,
+                    bio,
                     imageData
                 }
                 // Save the image data to local storage
@@ -28,7 +30,7 @@ const Register = () => {
                 toast("Registration Successfull..")
                 setTimeout(() => {
                     navigate('/')
-                }, 2000)
+                }, 1000)
             };
 
             reader.readAsDataURL(photo);
@@ -62,7 +64,13 @@ const Register = () => {
                                         <label className="label">
                                             <span className="label-text">Password</span>
                                         </label>
-                                        <input type="text" placeholder="password" name="pass" className="input input-bordered" />
+                                        <input type="text" placeholder="Password" name="pass" className="input input-bordered" />
+                                    </div>
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text">Bio</span>
+                                        </label>
+                                        <input type="text" placeholder="Write your Bio" name="bio" className="input input-bordered" />
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
