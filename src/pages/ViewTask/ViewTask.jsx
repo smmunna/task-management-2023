@@ -99,7 +99,7 @@ const ViewTask = () => {
                 {/* Showing error if data not found */}
 
                 {
-                    (alltask.length <= 0) &&
+                    (alltask?.length <= 0) &&
                     <div className={`px-5 md:px-24 py-10`}>
                         <div className="text-center pb-4">
                             <h3 className="text-3xl text-red-600 font-bold">No Task Found, Add task then come here..</h3>
@@ -128,7 +128,7 @@ const ViewTask = () => {
                                 {/* row 1 */}
 
                                 {
-                                    alltask.map((tasks, index) => {
+                                    alltask?.map((tasks, index) => {
                                         return <React.Fragment key={index + 1}>
                                             <tr>
                                                 <th>{index + 1}</th>
