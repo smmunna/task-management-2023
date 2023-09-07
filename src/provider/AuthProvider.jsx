@@ -19,3 +19,12 @@ const AuthProvider = ({ children }) => {
 }
 
 export default AuthProvider;
+
+
+/***
+ * AUTHOR: MINHAZUL ABEDIN MUNNA
+ * LINKEDIN: https://www.linkedin.com/in/minhazulabedinmunna/
+ * TIME: 10:56 PM
+ * DATE: 07 September 2023
+ * Completed the task for iBios.LTD
+ * **/ 
