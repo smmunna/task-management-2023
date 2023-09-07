@@ -24,10 +24,10 @@ Data Storage : Use local storage or Indexed DB of your browser to store all type
 
 <hr>
 /***
- * AUTHOR: MINHAZUL ABEDIN MUNNA
- * LINKEDIN: https://www.linkedin.com/in/minhazulabedinmunna/
- * TIME: 10:56 PM
- * DATE: 07 September 2023
- * Completed the task for iBios.LTD
+ * AUTHOR: MINHAZUL ABEDIN MUNNA <br>
+ * LINKEDIN: https://www.linkedin.com/in/minhazulabedinmunna/ <br>
+ * TIME: 10:56 PM <br>
+ * DATE: 07 September 2023 <br>
+ * Completed the task for iBios.LTD <br>
  * **/ 
 
