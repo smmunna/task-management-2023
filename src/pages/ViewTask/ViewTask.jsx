@@ -6,9 +6,7 @@ const ViewTask = () => {
     const [chooseStatus, setChooseStatus] = useState([])
     const [chooseDate, setChooseDate] = useState('');
 
-
     useEffect(() => {
-
         const allViewTask = JSON.parse(localStorage.getItem('task-info'))
         if (choosePriority === '5') {
 
@@ -99,6 +97,7 @@ const ViewTask = () => {
                 {/* Showing error if data not found */}
 
                 {
+
                     (alltask?.length <= 0) &&
                     <div className={`px-5 md:px-24 py-10`}>
                         <div className="text-center pb-4">
