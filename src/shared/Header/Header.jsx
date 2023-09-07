@@ -9,7 +9,8 @@ const Header = () => {
     const navlink = <>
         <li><Link to="/home">Home</Link></li>
         <li><Link to="/home/create-task">Create Task</Link></li>
-        <li><a>Join Team</a></li>
+        <li><Link to="/home/view-task">View Task</Link></li>
+        <li><Link to="/home/view-task">Join Team</Link></li>
     </>
 
     const handleLogout = () => {
