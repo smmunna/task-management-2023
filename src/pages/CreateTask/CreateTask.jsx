@@ -7,6 +7,14 @@ const CreateTask = () => {
     const [taskdata, setTaskdata] = useState([])
 
 
+    useEffect(() => {
+        // Load data from local storage when the component initializes
+        const storedData = localStorage.getItem('task-info');
+        if (storedData) {
+            setTaskdata(JSON.parse(storedData));
+        }
+    }, []);
+
     const handleFormSubmit = (e) => {
         e.preventDefault()
         const form = e.target;
@@ -18,22 +26,19 @@ const CreateTask = () => {
         const definedTask = {
             title, description, date, priorityChange, statuschange, teamname
         }
-        const taskInfo = [...taskdata, definedTask]
-        setTaskdata(taskInfo)
-        toast('Task hasbeen added to the localstorage Successfully')
-    }
+        const updatedTaskData = [...taskdata, definedTask];
+        setTaskdata(updatedTaskData);
 
-    useEffect(() => {
-        // for setting in the localStorage;
-        
-        const taskInfoLocalstorage = JSON.stringify(taskdata)
-        localStorage.setItem('task-info', taskInfoLocalstorage)
-        
-    }, [handleFormSubmit])
+        // Save the updated data to local storage
+        localStorage.setItem('task-info', JSON.stringify(updatedTaskData));
+
+        toast('Task has been added to local storage successfully');
+        form.reset();
+    }
 
     return (
         <div>
-            <div className="hero pt-5 pb-24 lg:pt-0">
+            <div className="hero pt-5 lg:pt-0">
                 <div className="hero-content">
                     <div className="card shadow-2xl bg-base-200">
                         <div>
@@ -47,19 +52,19 @@ const CreateTask = () => {
                                             <label className="label">
                                                 <span className="label-text">Title</span>
                                             </label>
-                                            <input type="text" placeholder="Title of task" name="title" className="input input-bordered w-full md:w-96" />
+                                            <input type="text" placeholder="Title of task" name="title" className="input input-bordered w-full md:w-96" required/>
                                         </div>
                                         <div className="form-control">
                                             <label className="label">
                                                 <span className="label-text">Description</span>
                                             </label>
-                                            <input type="text" placeholder="Description" name="description" className="input input-bordered md:w-96" />
+                                            <input type="text" placeholder="Description" name="description" className="input input-bordered md:w-96" required/>
                                         </div>
                                         <div className="form-control">
                                             <label className="label">
                                                 <span className="label-text">Due Date</span>
                                             </label>
-                                            <input type="date" name="date" className="input input-bordered" />
+                                            <input type="date" name="date" className="input input-bordered" required/>
                                         </div>
                                     </div>
 
@@ -91,7 +96,7 @@ const CreateTask = () => {
                                             <label className="label">
                                                 <span className="label-text">Set Team</span>
                                             </label>
-                                            <input type="text" placeholder="Set the team name" name="teamname" className="input input-bordered md:w-96" />
+                                            <input type="text" placeholder="Set the team name" name="teamname" className="input input-bordered md:w-96" required/>
                                         </div>
                                     </div>
 
@@ -104,7 +109,19 @@ const CreateTask = () => {
                     </div>
                 </div>
             </div>
-            <ToastContainer/>
+            <hr className="pb-10" />
+            <div className="px-4 flex justify-center items-center pb-24 pt-12 lg:pt-0">
+                <div className="mockup-code w-full lg:w-7/12">
+                    <pre data-prefix="1" className="text-warning"><code>Requirements 2 Completed, Task Creation and Management:</code></pre>
+                    <pre data-prefix="2"><code>Allow users to create tasks with a title, description, due date, and priority level.
+                    </code></pre>
+                    <pre data-prefix="3"><code>Users should be able to assign tasks to other team members.</code></pre>
+                    <pre data-prefix="4"><code>Implemented a way to mark tasks as completed or in progress.
+                    </code></pre>
+                </div>
+            </div>
+
+            <ToastContainer />
         </div>
     );
 }
