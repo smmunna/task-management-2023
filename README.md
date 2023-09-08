@@ -22,7 +22,10 @@ Data Storage : Use local storage or Indexed DB of your browser to store all type
    - Allow users to create tasks with a title, description, due date, and priority level.
    - Users should be able to assign tasks to other team members.
    - Implement a way to mark tasks as completed or in progress.
-  
+
+   ## Creating task section and view task
+     ![image](https://github.com/smmunna/task-management-2023/assets/64527538/76fd4c20-700b-412c-a163-1d3ae423179f)
+
      ![image](https://github.com/smmunna/task-management-2023/assets/64527538/5e23532a-5bbb-4eeb-a6be-1b95e6de66f6)
      
 
