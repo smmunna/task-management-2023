@@ -57,13 +57,13 @@ const Login = () => {
                                         <label className="label">
                                             <span className="label-text">Email</span>
                                         </label>
-                                        <input type="text" placeholder="email" name="email" className="input input-bordered w-full lg:w-96" required />
+                                        <input type="email" placeholder="email" name="email" className="input input-bordered w-full lg:w-96" required />
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Password</span>
                                         </label>
-                                        <input type="text" placeholder="password" name="pass" className="input input-bordered w-full lg:w-96" required />
+                                        <input type="password" placeholder="password" name="pass" className="input input-bordered w-full lg:w-96" required />
                                     </div>
                                     <div className="form-control mt-6">
                                         <button className="btn btn-primary">Login</button>
