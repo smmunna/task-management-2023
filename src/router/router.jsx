@@ -9,11 +9,16 @@ import CreateTask from "../pages/CreateTask/CreateTask";
 import ViewTask from "../pages/ViewTask/ViewTask";
 import JoinTeam from "../pages/JoinTeam/Jointeam";
 import TeamTask from "../pages/JoinTeam/TeamTask";
+import Dashboard from "../pages/Dashboard/Dashboard";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: JSON.parse(localStorage.getItem('user')) ? <Main /> : <Login />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
   {
     path: "/register",
@@ -46,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: 'team-task',
         element: <PrivateRoutes><TeamTask /></PrivateRoutes>
+      },
+      {
+        path: 'dashboard',
+        element: <PrivateRoutes><Dashboard /></PrivateRoutes>
       }
     ]
   },

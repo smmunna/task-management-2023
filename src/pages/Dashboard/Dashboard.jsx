@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const ViewTask = () => {
+const Dashboard = () => {
     const [alltask, setAlltask] = useState([])
     const [choosePriority, setChoosePriority] = useState(6)
     const [chooseStatus, setChooseStatus] = useState(6)
@@ -163,4 +163,5 @@ const ViewTask = () => {
     );
 }
 
-export default ViewTask;
+export default Dashboard;
+

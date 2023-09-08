@@ -17,7 +17,7 @@ const Header = () => {
         localStorage.removeItem('user')
         toast('Logout Successfull')
         setTimeout(() => {
-            navigate('/')
+            navigate('/login')
         }, 1000)
 
     }
@@ -55,7 +55,7 @@ const Header = () => {
                                     Profile
                                 </Link>
                             </li>
-                            <li><a>Dashboard</a></li>
+                            <li><Link to="/home/dashboard">Dashboard</Link></li>
                             <li><a onClick={handleLogout}>Logout</a></li>
                         </ul>
                     </div>
