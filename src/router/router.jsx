@@ -59,6 +59,13 @@ const router = createBrowserRouter([
     ]
   },
 
+  {
+    path: '*',
+    element: <div>
+      <h3 className="text-center text-3xl py-12 text-red-500 font-serif font-bold leading-[2]"> 404 Error ! <br />No routes found ...!</h3>
+    </div>
+  }
+
 ]);
 
 export default router;
