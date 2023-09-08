@@ -52,31 +52,31 @@ const Register = () => {
                                         <label className="label">
                                             <span className="label-text">Username</span>
                                         </label>
-                                        <input type="text" placeholder="username" name="username" className="input input-bordered w-full lg:w-96" />
+                                        <input type="text" placeholder="username" name="username" className="input input-bordered w-full lg:w-96" required/>
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Email</span>
                                         </label>
-                                        <input type="text" placeholder="email" name="email" className="input input-bordered w-full lg:w-96" />
+                                        <input type="text" placeholder="email" name="email" className="input input-bordered w-full lg:w-96" required/>
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Password</span>
                                         </label>
-                                        <input type="text" placeholder="Password" name="pass" className="input input-bordered w-full lg:w-96" />
+                                        <input type="text" placeholder="Password" name="pass" className="input input-bordered w-full lg:w-96" required/>
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Bio</span>
                                         </label>
-                                        <input type="text" placeholder="Write your Bio" name="bio" className="input input-bordered w-full lg:w-96 " />
+                                        <input type="text" placeholder="Write your Bio" name="bio" className="input input-bordered w-full lg:w-96 " required/>
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Photo</span>
                                         </label>
-                                        <input type="file" accept="image/*" name="photo" className="file-input file-input-bordered w-full lg:w-96" />
+                                        <input type="file" accept="image/*" name="photo" className="file-input file-input-bordered w-full lg:w-96" required/>
                                     </div>
                                     <div className="form-control mt-6">
                                         <button className="btn btn-primary" type="submit">Register</button>
